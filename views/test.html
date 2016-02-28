@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+html, body { height: 100%; margin: 0; padding: 0; }
+#map { height: 100%; }
+#info-box {
+  background-color: white;
+  border: 1px solid black;
+  bottom: 30px;
+  height: 20px;
+  padding: 10px;
+  position: absolute;
+  left: 30px;
+}
+</style>
+</head>
+<body>
+  <div id = "uber"></div>
+  <div id="map" style = "width: 500px; height: 500px;"></div>
+  <div id = "info-box"></div>
+  <div id="floating-panel">
+    <b>Mode of Travel: </b>
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+  </div>
+  <form>
+    <label>Start:</label>
+    <input id = "start" />
+    <label>Destination:</label>
+    <input id = "destination" />
+  </form>
+  <button id = "direction" style = "position: absolute; right = 100px;" onclick="buttonclick()">give me direction!</button>
+</div>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkBjmogOyMcL5_QVtayKZ_X85rSQAf3BE
+&libraries=visualization&callback=initMap">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="/map.js"> </script>
+</body>
+</html>
